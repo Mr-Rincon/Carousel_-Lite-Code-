@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎡 by ID-Diego</title>
+
+  <!-- CSS -->
+  <style>
+    .container {
+      margin: 0px auto;
+      width: 500px;
+      border: 1px black solid;
+    }
+    
+    .slider {
+      background-color: black;
+      height: 500px;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    
+    .slide {
+      /* height: 500px; */ /* <-- Uncomment this line for the pitures to cover the whole slide, may cause disproportion*/
+      width: 100%;
+      vertical-align: middle;
+    }
+    
+    .controlsContainer {
+      position: relative;
+    }
+    
+    .control {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: transparent;
+      color: #111;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      border-radius: 50%;
+      font-size: 20px;
+      top: -250px;
+    }
+    
+    .control:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      cursor: w-resize;
+    }
+    
+    .nextBtn {
+      right: 0px;
+    }
+  </style>
+
+</head>
+
+<!-- HTML -->
+<body>
+
+  <div class="container">
+
+    <div class="slider">
+
+      <a href="#"><img class="slide" src="https://forums.crackberry.com/attachments/blackberry-q10-f272/171886d1371181552t-bbm-display-picture-limitations-423341110329_qy737vid_l.jpg" alt=""></a>
+
+      <a href="#"><img class="slide" src="https://www.tec-artigrafiche.it/wp-content/uploads/2019/12/Lion-.-1600x1115_stampa-500x500.jpg" alt=""></a>
+
+      <a href="#"><img class="slide" src="https://media.istockphoto.com/photos/black-white-tiger-picture-id954560222?k=20&m=954560222&s=612x612&w=0&h=zb2RFnC8gYUUe71WjqU4D3q6SCbVkKDXA2N1uLMn0Gg=" alt=""></a>
+
+      <a href="#"><img class="slide" src="https://i.pinimg.com/originals/7a/05/e3/7a05e3bff4306abecd6581dea67c9b7e.jpg" alt=""></a>
+
+    </div>
+
+    <div class="controlsContainer">
+
+      <button class="control prevBtn" onclick="controls(false)" id="prev"><</button>
+
+      <button class="control nextBtn" onclick="controls(true)" id="next">></button>
+
+    </div>
+
+  </div>
+
+</body>
+
+<!-- JAVASCRIPT -->
+<script>
+
+    var count = 0;
+    setInterval(function(){controls(true)}, 5000); /*Auto slide ON*/
+
+    function controls(press) {
+        const slide = document.getElementsByClassName("slide");
+        const slideCount = slide.length-1;
+        count = press? (++count>slideCount?0:count):(--count<0?slideCount:count)
+        slide[count].scrollIntoView();
+        return;
+    }
+
+</script>
+
+</html>
