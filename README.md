@@ -12,4 +12,5 @@ Caroussel made with little code to be used quickly. Just add more images on the 
 ![Image text](https://github.com/ID-Diego/Carousel_Little-Code/blob/main/img/html.PNG)
 
 🖥
-⌨️🖱 Enjoy code
+  
+⌨️🖱 Enjoy coding!!
