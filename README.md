@@ -3,4 +3,4 @@
 Simple + Minimalistic 
 
 Caroussel made with little code to be used quickly. Just add more images on the html code and they will be on the caroussel.
-![Image text](https://github.com/zzuljs/CppLearning/blob/master/CppLearning/raw/master/Itachi.jpg)
+![Image text](https://i1.sndcdn.com/artworks-Sn5XJy8cXhNNDxYr-OWj10w-t500x500.jpg)
